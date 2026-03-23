@@ -1,1019 +1,498 @@
-:root {
-      --gold: #D4A017;
-      --gold-light: #F0C040;
-      --gold-dim: #8a6510;
-      --black: #0a0a0a;
-      --black-2: #111111;
-      --black-3: #1a1a1a;
-      --white: #f8f4ee;
-      --green: #2a7d4f;
-      --green-light: #34a863;
-      --red: #c0392b;
-      --gray: #555;
-      --radius: 12px;
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uplift Career Institute – From Basics to Brilliance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-icon">U</div>
+      <div class="nav-logo-text">
+        Uplift
+        <span>Career Institute</span>
+      </div>
+    </a>
+
+
+<ul class="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#courses">Courses</a></li>
+  <li><a href="#testimonials">Reviews</a></li>
+  <li><a href="#contact" class="nav-cta">Enroll Now →</a></li>
+</ul>
+
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
+
+
+  </nav>
+
+  <!-- Mobile Menu -->
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" onclick="closeMobileMenu()">Home</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#courses" onclick="closeMobileMenu()">Courses</a>
+    <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
+    <a href="#contact" onclick="closeMobileMenu()">Enroll Now</a>
+  </div>
+
+  <!-- ── HERO ── -->
+
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+
+<!-- Floating particles -->
+<div class="particle" style="left:8%;width:6px;height:6px;background:var(--gold);animation-duration:8s;animation-delay:0s;"></div>
+<div class="particle" style="left:22%;width:4px;height:4px;background:var(--green-light);animation-duration:12s;animation-delay:2s;"></div>
+<div class="particle" style="left:45%;width:5px;height:5px;background:var(--gold-light);animation-duration:9s;animation-delay:4s;"></div>
+<div class="particle" style="left:68%;width:7px;height:7px;background:var(--gold);animation-duration:11s;animation-delay:1s;"></div>
+<div class="particle" style="left:85%;width:4px;height:4px;background:var(--green-light);animation-duration:10s;animation-delay:3s;"></div>
+<div class="particle" style="left:35%;width:5px;height:5px;background:var(--gold);animation-duration:14s;animation-delay:6s;"></div>
+
+<div class="hero-content">
+  <div class="hero-badge">🎓 Admissions Open 2025–26</div>
+
+  <h1 class="hero-title">
+    <span class="hero-title-gold">Uplift</span>
+  </h1>
+  <div class="hero-subtitle-institute">Career Institute</div>
+
+  <p class="hero-tagline">
+    From <strong>Basics</strong> To <em>Brilliance</em>
+    &nbsp;·&nbsp; Excellence in Education
+  </p>
+
+  <div class="hero-actions">
+    <a href="#courses" class="btn-primary">Explore Courses →</a>
+    <a href="#contact" class="btn-secondary">Contact Us</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">100+</span>
+      <span class="stat-label">Students Enrolled</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">95%</span>
+      <span class="stat-label">Success Rate</span>
+    </div>
+    <!--<div class="stat">
+      <span class="stat-num">1+</span>
+      <span class="stat-label">Years of Excellence</span>
+    </div>-->
+    <div class="stat">
+      <span class="stat-num">3+</span>
+      <span class="stat-label">Expert Educators</span>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- ── TICKER ── -->
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">No Unnecessary Burden</span>
+      <span class="ticker-item">Achiever's Guidance</span>
+      <span class="ticker-item">Affordable Excellence</span>
+      <span class="ticker-item">Quality Education</span>
+      <span class="ticker-item">Daily Practice Papers</span>
+      <span class="ticker-item">Target Competitive Exams</span>
+      <span class="ticker-item">All-in-One Learning Hub</span>
+      <span class="ticker-item">Uplifting Every Student</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">No Unnecessary Burden</span>
+      <span class="ticker-item">Achiever's Guidance</span>
+      <span class="ticker-item">Affordable Excellence</span>
+      <span class="ticker-item">Quality Education</span>
+      <span class="ticker-item">Daily Practice Papers</span>
+      <span class="ticker-item">Target Competitive Exams</span>
+      <span class="ticker-item">All-in-One Learning Hub</span>
+      <span class="ticker-item">Uplifting Every Student</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-left reveal">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-heading">Building Tomorrow's Leaders Today</h2>
+        <p class="section-subtext">
+          Uplift Career Institute is a premier coaching centre committed to nurturing academic excellence from Class 5 through to competitive examination preparation. Our expert faculty and structured approach make us the top choice for serious students.
+        </p>
+
+
+    <div class="about-features">
+      <div class="about-feature">
+        <div class="feature-icon">📚</div>
+        <div class="feature-text">
+          <strong>Conceptual Learning</strong>
+          <p>We go beyond rote memorisation — building deep understanding for lifelong application.</p>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="feature-icon">📝</div>
+        <div class="feature-text">
+          <strong>Daily Practice Sheets</strong>
+          <p>Structured daily homework that reinforces classroom learning and tracks progress.</p>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-text">
+          <strong>Olympiad & Competitive Prep</strong>
+          <p>Dedicated coaching for AMU, JMI, Olympiads, and Board Examinations.</p>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="feature-icon">💰</div>
+        <div class="feature-text">
+          <strong>Affordable Fee Structure</strong>
+          <p>World-class education that doesn't burden the family — excellence within reach.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-right reveal">
+    <div class="about-card-stack">
+      <div class="about-card">
+        <div class="about-card-label">Our Promise</div>
+        <p class="about-card-quote">"Every student who walks through our doors has the potential for brilliance — we simply help them find it."</p>
+        <div class="about-card-meta">
+          <div class="meta-item">
+            <span class="meta-num">100+</span>
+            <span class="meta-desc">Students</span>
+          </div>
+          <!--<div class="meta-item">
+            <span class="meta-num">1+</span>
+            <span class="meta-desc">Years</span>
+          </div>-->
+          <div class="meta-item">
+            <span class="meta-num">95%</span>
+            <span class="meta-desc">Pass Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- ── COURSES ── -->
+
+  <section id="courses">
+    <div class="courses-header reveal">
+      <span class="section-tag">Academic Programs</span>
+      <h2 class="section-heading">Our Courses</h2>
+      <p class="section-subtext" style="margin: 16px auto 0; color: rgba(248,244,238,0.5);">
+        Structured programs designed for every stage of your academic journey — from foundation to excellence.
+      </p>
+    </div>
+
+
+<div class="courses-grid">
+
+  <div class="course-card reveal">
+    <span class="course-badge">Middle School</span>
+    <h3 class="course-title">Class 5, 6, 7 & 8</h3>
+    <ul class="course-list">
+      <li>Conceptual learning for Science and Maths with practice tests</li>
+      <li>Preparation for AMU, JMI & Other Competitive Examinations (included in Regular Classes)</li>
+      <li>Preparation for Olympiads</li>
+      <li>Daily Practice Sheets provided</li>
+    </ul>
+    <div class="course-footer">
+      <a href="#contact" class="course-enroll">Enroll →</a>
+      <span class="course-level">Foundation Level</span>
+    </div>
+  </div>
+
+  <div class="course-card reveal">
+    <span class="course-badge">Secondary</span>
+    <h3 class="course-title">Class 9 & 10 Foundation</h3>
+    <ul class="course-list">
+      <li>Conceptual learning for Science and Maths with practice tests</li>
+      <li>Preparation for Board Examination</li>
+      <li>Preparation for Competitive Exams</li>
+      <li>Preparation for Olympiads</li>
+      <li>Daily Practice Sheets provided</li>
+    </ul>
+    <div class="course-footer">
+      <a href="#contact" class="course-enroll">Enroll →</a>
+      <span class="course-level">Intermediate Level</span>
+    </div>
+  </div>
+
+  <div class="course-card reveal">
+    <span class="course-badge">Senior Secondary</span>
+    <h3 class="course-title">Class 11 & 12 Advanced</h3>
+    <ul class="course-list">
+      <li>Conceptual learning for Science and Maths with practice tests</li>
+      <li>Preparation for Board Examination</li>
+      <li>Preparation for Competitive Exams (JEE, NEET, etc.)</li>
+      <li>Preparation for Olympiads</li>
+      <li>Daily Practice Sheets provided</li>
+    </ul>
+    <div class="course-footer">
+      <a href="#contact" class="course-enroll">Enroll →</a>
+      <span class="course-level">Advanced Level</span>
+    </div>
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+
+  <section id="testimonials">
+    <div class="test-header reveal">
+      <span class="section-tag">Student Stories</span>
+      <h2 class="section-heading">What Our Students Say</h2>
+    </div>
+
+
+<div class="test-grid">
+  <div class="test-card reveal">
+    <div class="test-stars">★★★★★</div>
+    <p class="test-quote">"good teachers
+best teaching skillls
+solve every problem easily
+thnx for teaching"</p>
+    <div class="test-author">
+      <div class="test-avatar">A</div>
+      <div>
+        <div class="test-name">Harish</div>
+        <div class="test-role">Class 10, 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="test-card reveal">
+    <div class="test-stars">★★★★★</div>
+    <p class="test-quote">"Best institute for 5 to 12 class this is very best institute for weak student"</p>
+    <div class="test-author">
+      <div class="test-avatar">R</div>
+      <div>
+        <div class="test-name">Sameer</div>
+        <div class="test-role">Class 8, 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="test-card reveal">
+    <div class="test-stars">★★★★★</div>
+    <p class="test-quote">"A really really good experience it was excellent work my son literally got full max in almost every subject I prefer if anyone is finding a good tution this is uplift career institute👌👌👌👌👌💫💫</p>
+    <div class="test-author">
+      <div class="test-avatar">M</div>
+      <div>
+        <div class="test-name">SILA WASEEM</div>
+        <div class="test-role">Parent</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- ── CONTACT ── -->
+
+  <section id="contact">
+    <div class="contact-inner">
+
+
+  <div class="contact-left reveal">
+    <span class="section-tag">Get In Touch</span>
+    <h2 class="section-heading">Visit Us &amp; Enroll Today</h2>
+    <p class="section-subtext">
+      Ready to begin your journey from basics to brilliance? Reach out to us and we'll help you find the right programme for your child.
+    </p>
+
+    <div class="contact-info-list">
+      <div class="contact-info-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-info-text">
+          <strong>Call Us</strong>
+          <span><a href="tel:9219299366">+91 92192 99366</a></span>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-info-text">
+          <strong>Our Address</strong>
+          <span>572/21, Street-21, Zakir Nagar, New Delhi – 110025</span>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-info-text">
+          <strong>Class Timings</strong>
+          <span>Mon – Sat: 9:30 AM – 9:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form reveal">
+    <h3 class="form-title">Send Us a Message</h3>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Full name" />
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="careerinstituteuplift@gmail.com" />
+    </div>
+
+    <div class="form-group">
+      <label>Interested Course</label>
+      <select>
+        <option value="" disabled selected>Select a programme</option>
+        <option>Class 5, 6, 7 & 8</option>
+        <option>Class 9 & 10 Foundation</option>
+        <option>Class 11 & 12 Advanced</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <textarea placeholder="Tell us about your child's current class and goals..."></textarea>
+    </div>
+
+    <button class="form-submit">Send Message →</button>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- ── FOOTER ── -->
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="nav-logo-icon">U</div>
+          <div class="nav-logo-text">
+            Uplift
+            <span>Career Institute</span>
+          </div>
+        </div>
+        <p>Empowering students from Class 5 to 12 with quality, affordable, and conceptual education in New Delhi since 2025.</p>
+      </div>
+
+
+  <div class="footer-col">
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Courses</h4>
+    <ul>
+      <li><a href="#courses">Class 5, 6, 7 & 8</a></li>
+      <li><a href="#courses">Class 9 & 10</a></li>
+      <li><a href="#courses">Class 11 & 12</a></li>
+      <li><a href="#contact">Olympiad Prep</a></li>
+      <li><a href="#contact">Competitive Exams</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <p>&copy; 2025 Uplift Career Institute. All rights reserved.</p>
+  <p>📍 Zakir Nagar, New Delhi · <a href="tel:9219299366">+91 92192 99366</a></p>
+</div>
+
+
+  </footer>
+
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
     }
 
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--black);
-  color: var(--white);
-  overflow-x: hidden;
-}
-
-/* ──────────────────────────────────────────
-   NAVBAR
-────────────────────────────────────────── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 999;
-  background: rgba(10,10,10,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212,160,23,0.15);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  height: 70px;
-  transition: all 0.3s ease;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.nav-logo-icon {
-  width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  color: var(--black);
-  font-size: 20px;
-}
-
-.nav-logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  color: var(--white);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-.nav-logo-text span {
-  display: block;
-  font-size: 10px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  color: var(--gold);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: rgba(248,244,238,0.7);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.3s;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px; left: 0;
-  width: 0; height: 1px;
-  background: var(--gold);
-  transition: width 0.3s;
-}
-
-.nav-links a:hover { color: var(--gold); }
-.nav-links a:hover::after { width: 100%; }
-
-.nav-cta {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--black) !important;
-  padding: 8px 20px;
-  border-radius: 6px;
-  font-weight: 600 !important;
-  transition: transform 0.2s, box-shadow 0.2s !important;
-}
-
-.nav-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(212,160,23,0.4);
-}
-
-.nav-cta::after { display: none !important; }
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 4px;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px; height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 70px; left: 0; right: 0;
-  background: var(--black-2);
-  border-bottom: 1px solid rgba(212,160,23,0.15);
-  padding: 20px 5%;
-  z-index: 998;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.mobile-menu a {
-  color: var(--white);
-  text-decoration: none;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  font-size: 15px;
-  display: block;
-}
-
-.mobile-menu.open { display: flex; }
-
-/* ──────────────────────────────────────────
-   HERO
-────────────────────────────────────────── */
-#home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  padding: 100px 5% 60px;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,160,23,0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(42,125,79,0.08) 0%, transparent 60%),
-    var(--black);
-}
-
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(212,160,23,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212,160,23,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* Floating particles */
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  animation: float-particle linear infinite;
-  opacity: 0;
-}
-
-@keyframes float-particle {
-  0% { transform: translateY(100vh) scale(0); opacity: 0; }
-  10% { opacity: 0.6; }
-  90% { opacity: 0.4; }
-  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(212,160,23,0.1);
-  border: 1px solid rgba(212,160,23,0.3);
-  border-radius: 30px;
-  padding: 6px 18px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--gold);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  animation: fadeUp 0.8s ease 0.2s both;
-}
-
-.hero-badge::before {
-  content: '';
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
-  animation: pulse 2s ease infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.8); }
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(52px, 8vw, 96px);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -2px;
-  margin-bottom: 8px;
-  animation: fadeUp 0.8s ease 0.4s both;
-}
-
-.hero-title-gold {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle-institute {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  animation: fadeUp 0.8s ease 0.6s both;
-}
-
-.hero-tagline {
-  font-size: 18px;
-  color: rgba(248,244,238,0.6);
-  margin-bottom: 44px;
-  letter-spacing: 1px;
-  animation: fadeUp 0.8s ease 0.8s both;
-}
-
-.hero-tagline strong {
-  color: var(--red);
-  text-decoration: underline;
-  text-decoration-color: var(--red);
-}
-
-.hero-tagline em {
-  color: var(--green-light);
-  font-style: normal;
-  text-decoration: underline;
-  text-decoration-color: var(--green-light);
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeUp 0.8s ease 1s both;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--black);
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(212,160,23,0.4);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--white);
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
-  border: 1px solid rgba(248,244,238,0.2);
-  transition: all 0.2s;
-}
-
-.btn-secondary:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-/* Stats bar */
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  margin-top: 64px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(212,160,23,0.15);
-  animation: fadeUp 0.8s ease 1.2s both;
-  flex-wrap: wrap;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 900;
-  color: var(--gold);
-  display: block;
-}
-
-.stat-label {
-  font-size: 12px;
-  color: rgba(248,244,238,0.5);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ──────────────────────────────────────────
-   TICKER / MARQUEE
-────────────────────────────────────────── */
-.ticker-wrap {
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  padding: 12px 0;
-  overflow: hidden;
-}
-
-.ticker-track {
-  display: flex;
-  gap: 0;
-  animation: ticker 30s linear infinite;
-  white-space: nowrap;
-}
-
-.ticker-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 28px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--black);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.ticker-item::after {
-  content: '◆';
-  font-size: 8px;
-  opacity: 0.5;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ──────────────────────────────────────────
-   SECTION COMMON
-────────────────────────────────────────── */
-section { scroll-margin-top: 70px; }
-
-.section-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.section-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 900;
-  line-height: 1.1;
-}
-
-.section-subtext {
-  font-size: 16px;
-  color: rgba(248,244,238,0.55);
-  line-height: 1.7;
-  max-width: 560px;
-}
-
-/* ──────────────────────────────────────────
-   ABOUT
-────────────────────────────────────────── */
-#about {
-  background: var(--black-2);
-  padding: 100px 5%;
-}
-
-.about-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.about-left .section-heading { color: var(--white); margin-bottom: 20px; }
-.about-left .section-subtext { margin-bottom: 32px; }
-
-.about-features {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.about-feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.feature-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  background: rgba(212,160,23,0.1);
-  border: 1px solid rgba(212,160,23,0.2);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-
-.feature-text strong {
-  display: block;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 2px;
-}
-
-.feature-text p {
-  font-size: 13px;
-  color: rgba(248,244,238,0.5);
-  line-height: 1.5;
-}
-
-.about-right {
-  position: relative;
-}
-
-.about-card-stack {
-  position: relative;
-}
-
-.about-card {
-  background: var(--black-3);
-  border: 1px solid rgba(212,160,23,0.15);
-  border-radius: 16px;
-  padding: 32px;
-}
-
-.about-card-label {
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.about-card-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-.about-card-meta {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.meta-item {
-  text-align: center;
-}
-
-.meta-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--gold);
-  display: block;
-}
-
-.meta-desc {
-  font-size: 11px;
-  color: rgba(248,244,238,0.45);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ──────────────────────────────────────────
-   COURSES
-────────────────────────────────────────── */
-#courses {
-  background: var(--black);
-  padding: 100px 5%;
-}
-
-.courses-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 60px;
-}
-
-.courses-header .section-heading { color: var(--white); margin-bottom: 16px; }
-
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.course-card {
-  background: var(--black-3);
-  border: 1px solid rgba(212,160,23,0.12);
-  border-radius: var(--radius);
-  padding: 32px;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.course-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.course-card:hover::before { transform: scaleX(1); }
-
-.course-card:hover {
-  border-color: rgba(212,160,23,0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
-
-.course-badge {
-  display: inline-block;
-  background: rgba(42,125,79,0.15);
-  border: 1px solid rgba(42,125,79,0.3);
-  color: var(--green-light);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
-.course-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-weight: 900;
-  color: var(--white);
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.course-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.course-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13.5px;
-  color: rgba(248,244,238,0.65);
-  line-height: 1.4;
-}
-
-.course-list li::before {
-  content: '→';
-  color: var(--gold);
-  flex-shrink: 0;
-  margin-top: 1px;
-  font-weight: 600;
-}
-
-.course-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 28px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-.course-enroll {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--black);
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.course-enroll:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(212,160,23,0.35);
-}
-
-.course-level {
-  font-size: 12px;
-  color: rgba(248,244,238,0.35);
-}
-
-/* ──────────────────────────────────────────
-   TESTIMONIALS
-────────────────────────────────────────── */
-#testimonials {
-  background: var(--black-2);
-  padding: 100px 5%;
-}
-
-.test-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.test-header .section-heading { color: var(--white); margin-bottom: 12px; }
-
-.test-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.test-card {
-  background: var(--black-3);
-  border: 1px solid rgba(212,160,23,0.12);
-  border-radius: var(--radius);
-  padding: 32px;
-  position: relative;
-}
-
-.test-stars {
-  color: var(--gold);
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-
-.test-quote {
-  font-size: 15px;
-  color: rgba(248,244,238,0.7);
-  line-height: 1.7;
-  margin-bottom: 24px;
-  font-style: italic;
-}
-
-.test-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.test-avatar {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold-dim), var(--gold));
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  color: var(--black);
-  font-size: 18px;
-}
-
-.test-name {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--white);
-}
-
-.test-role {
-  font-size: 12px;
-  color: var(--gold);
-}
-
-/* ──────────────────────────────────────────
-   CONTACT
-────────────────────────────────────────── */
-#contact {
-  background: var(--black);
-  padding: 100px 5%;
-}
-
-.contact-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.contact-left .section-heading { color: var(--white); margin-bottom: 16px; }
-.contact-left .section-subtext { margin-bottom: 40px; }
-
-.contact-info-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.contact-icon {
-  width: 44px; height: 44px;
-  border-radius: 10px;
-  background: rgba(212,160,23,0.1);
-  border: 1px solid rgba(212,160,23,0.2);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.contact-info-text strong {
-  display: block;
-  font-size: 14px;
-  color: var(--white);
-  margin-bottom: 2px;
-}
-
-.contact-info-text span {
-  font-size: 13px;
-  color: rgba(248,244,238,0.5);
-}
-
-.contact-info-text a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-.contact-form {
-  background: var(--black-3);
-  border: 1px solid rgba(212,160,23,0.15);
-  border-radius: 16px;
-  padding: 40px;
-}
-
-.form-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 28px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(248,244,238,0.5);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(212,160,23,0.2);
-  border-radius: 8px;
-  padding: 12px 16px;
-  color: var(--white);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.3s, background 0.3s;
-  width: 100%;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(248,244,238,0.25);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--gold);
-  background: rgba(212,160,23,0.05);
-}
-
-.form-group select option { background: var(--black-3); }
-
-.form-group textarea { resize: vertical; min-height: 100px; }
-
-.form-submit {
-  width: 100%;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--black);
-  border: none;
-  padding: 14px 24px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 700;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  letter-spacing: 0.5px;
-  margin-top: 8px;
-}
-
-.form-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(212,160,23,0.35);
-}
-
-/* ──────────────────────────────────────────
-   FOOTER
-────────────────────────────────────────── */
-footer {
-  background: var(--black-2);
-  border-top: 1px solid rgba(212,160,23,0.1);
-  padding: 48px 5% 32px;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  color: rgba(248,244,238,0.45);
-  line-height: 1.7;
-  margin-top: 16px;
-  max-width: 280px;
-}
-
-.footer-col h4 {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
-}
-
-.footer-col ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-col ul li a {
-  color: rgba(248,244,238,0.5);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-.footer-col ul li a:hover { color: var(--gold); }
-
-.footer-bottom {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.footer-bottom p {
-  font-size: 13px;
-  color: rgba(248,244,238,0.3);
-}
-
-.footer-bottom a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-/* ──────────────────────────────────────────
-   RESPONSIVE
-────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-
-  .about-inner { grid-template-columns: 1fr; gap: 48px; }
-  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-
-  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-
-  .form-row { grid-template-columns: 1fr; }
-
-  .hero-stats { gap: 28px; }
-
-  .about-card-meta { gap: 16px; }
-}
-
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Form submit
+    document.querySelector('.form-submit').addEventListener('click', function () {
+      const inputs = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
+      let allFilled = true;
+      inputs.forEach(i => { if (!i.value) allFilled = false; });
+      if (allFilled) {
+        this.textContent = '✓ Message Sent!';
+        this.style.background = 'linear-gradient(135deg, var(--green), var(--green-light))';
+        setTimeout(() => {
+          this.textContent = 'Send Message →';
+          this.style.background = '';
+          inputs.forEach(i => i.value = '');
+        }, 3000);
+      } else {
+        this.textContent = 'Please fill all fields';
+        this.style.background = 'linear-gradient(135deg, #c0392b, #e74c3c)';
+        setTimeout(() => {
+          this.textContent = 'Send Message →';
+          this.style.background = '';
+        }, 2000);
+      }
+    });
+  </script>
+
+</body>
+</html>
