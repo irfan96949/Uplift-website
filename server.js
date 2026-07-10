@@ -205,7 +205,7 @@ async function handleLogin(req, res) {
     sessions.set(token, Date.now() + SESSION_MAX_AGE_SECONDS * 1000);
     const secureCookie = process.env.COOKIE_SECURE === 'true' ? '; Secure' : '';
     sendJson(res, 200, { ok: true }, {
-      'Set-Cookie': `uplift_session=${encodeURIComponent(token)}; HttpOnly; SameSite=Lax; Path=/; Max-Age=${SESSION_MAX_AGE_SECONDS}${secureCookie}`
+      'Set-Cookie': `uplift_session=${encodeURIComponent(token)}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${SESSION_MAX_AGE_SECONDS}${secureCookie}`
     });
     return;
   }
