@@ -90,18 +90,14 @@ function writeHomework(items) {
 }
 
 function send(res, status, body, type = 'application/json; charset=utf-8', headers = {}) {
-  res.writeHead(status, {
-  'Content-Type': type,
-  'X-Content-Type-Options': 'nosniff',
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
+    res.writeHead(status, {
+        'Content-Type': type,
+        'Access-Control-Allow-Origin': 'https://www.upliftcareerinstitute.com',
+        'Access-Control-Allow-Credentials': 'true',
+        ...headers
+    });
 
-  'Access-Control-Allow-Origin': 'https://www.upliftcareerinstitute.com',
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-
-  ...headers
-});
-  res.end(body);
+    res.end(body);
 }
 
 function sendJson(res, status, data, headers = {}) {
