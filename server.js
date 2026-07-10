@@ -91,11 +91,16 @@ function writeHomework(items) {
 
 function send(res, status, body, type = 'application/json; charset=utf-8', headers = {}) {
   res.writeHead(status, {
-    'Content-Type': type,
-    'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    ...headers
-  });
+  'Content-Type': type,
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+
+  'Access-Control-Allow-Origin': 'https://www.upliftcareerinstitute.com',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+
+  ...headers
+});
   res.end(body);
 }
 
@@ -298,6 +303,14 @@ ensureStorage();
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, `http://${req.headers.host}`);
+    if (req.method === 'OPTIONS') {
+  res.writeHead(204, {
+    'Access-Control-Allow-Origin': 'https://www.upliftcareerinstitute.com',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+  });
+  return res.end();
+}
     if (req.method === 'GET' && url.pathname === '/api/homework') return sendJson(res, 200, readHomework());
     if (req.method === 'GET' && url.pathname === '/api/session') return sendJson(res, 200, { loggedIn: isAuthed(req) });
     if (req.method === 'POST' && url.pathname === '/api/login') return handleLogin(req, res);
