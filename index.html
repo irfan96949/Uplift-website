@@ -557,7 +557,7 @@ thnx for teaching"</p>
         "'": '&#039;'
       }[char]));
     }
-
+const API_URL = "https://uplift-backend-kpwi.onrender.com";
     function renderHomework(items) {
       const visibleItems = activeHomeworkClass === 'all'
         ? items
@@ -588,8 +588,9 @@ thnx for teaching"</p>
 
     async function loadHomework() {
       try {
-        const response = await fetch('/api/homework');
+        const response = await fetch(`${API_URL}/api/homework`);
         const items = await response.json();
+
         renderHomework(items);
       } catch (error) {
         homeworkList.innerHTML = '<p class="homework-empty">Start the dynamic server to load homework updates.</p>';

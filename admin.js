@@ -1,4 +1,5 @@
-﻿const loginPanel = document.getElementById('login-panel');
+﻿const API_URL = "https://uplift-backend-kpwi.onrender.com";
+const loginPanel = document.getElementById('login-panel');
 const dashboardPanel = document.getElementById('dashboard-panel');
 const loginButton = document.getElementById('login-button');
 const logoutButton = document.getElementById('logout-button');
@@ -34,7 +35,7 @@ function showDashboard(show) {
 }
 
 async function checkSession() {
-  const response = await fetch('/api/session');
+  const response = await fetch(API_URL + '/api/session');
   const data = await response.json();
   showDashboard(data.loggedIn);
   if (data.loggedIn) loadHomework();
@@ -44,7 +45,7 @@ async function login() {
   loginMessage.textContent = '';
   const username = document.getElementById('login-username').value.trim();
   const password = document.getElementById('login-password').value;
-  const response = await fetch('/api/login', {
+  const response = await fetch(API_URL + '/api/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -58,7 +59,7 @@ async function login() {
 }
 
 async function logout() {
-  await fetch('/api/logout', { method: 'POST' });
+  await fetch(API_URL + '/api/logout', { method: 'POST' });
   showDashboard(false);
 }
 
@@ -88,7 +89,7 @@ function renderHomework(items) {
 }
 
 async function loadHomework() {
-  const response = await fetch('/api/homework');
+  const response = await fetch(API_URL + '/api/homework');
   const items = await response.json();
   renderHomework(items);
 }
@@ -96,7 +97,7 @@ async function loadHomework() {
 homeworkForm.addEventListener('submit', async event => {
   event.preventDefault();
   formMessage.textContent = 'Uploading...';
-  const response = await fetch('/api/homework', {
+  const response = await fetch(API_URL + '/api/homework', {
     method: 'POST',
     body: new FormData(homeworkForm)
   });
@@ -114,7 +115,9 @@ homeworkList.addEventListener('click', async event => {
   const button = event.target.closest('.homework-delete');
   if (!button) return;
   if (!confirm('Delete this homework?')) return;
-  await fetch(`/api/homework/${button.dataset.id}`, { method: 'DELETE' });
+  await fetch(`${API_URL}/api/homework/${button.dataset.id}`, {
+  method: 'DELETE'
+});
   loadHomework();
 });
 
