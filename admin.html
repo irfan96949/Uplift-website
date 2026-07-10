@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uplift Admin - Homework</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+  <main class="admin-wrap">
+    <section class="admin-login" id="login-panel">
+      <img src="uplift-logo-transparent.png" alt="Uplift logo" class="admin-logo">
+      <span class="section-tag">Teacher Access</span>
+      <h1>Teacher Portal</h1>
+      <p>Sign in to publish daily class-wise homework for your students.</p>
+      <label>Username<input id="login-username" type="text" autocomplete="username" placeholder="Your teacher username" required></label>
+      <label>Password<input id="login-password" type="password" autocomplete="current-password" placeholder="Enter password"></label>
+      <button id="login-button" class="homework-submit" type="button">Login</button>
+      <p class="admin-message" id="login-message"></p>
+      <a href="index.html#homework" class="admin-back">Back to website</a>
+    </section>
+
+    <section class="admin-dashboard" id="dashboard-panel" hidden>
+      <div class="admin-topbar">
+        <div>
+          <span class="section-tag">Homework Dashboard</span>
+          <h1>Upload Daily Homework</h1>
+        </div>
+        <div class="admin-actions">
+          <a href="index.html#homework">View Site</a>
+          <button id="logout-button" type="button">Logout</button>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+        <form class="homework-upload admin-form" id="admin-homework-form">
+          <span class="homework-panel-tag">New Homework</span>
+          <h3>Add Homework</h3>
+          <label>Class
+            <select name="classGroup" required>
+              <option value="5-8">Class 5-8</option>
+              <option value="9-10">Class 9-10</option>
+              <option value="11-12">Class 11-12</option>
+            </select>
+          </label>
+          <label>Subject<input name="subject" type="text" placeholder="Maths, Science, English..." required></label>
+          <label>Homework Title<input name="title" type="text" placeholder="Chapter name or worksheet title" required></label>
+          <label>Details<textarea name="details" placeholder="Questions, pages, instructions, or notes" required></textarea></label>
+          <div class="homework-form-row">
+            <label>Given Date<input name="givenDate" type="date" required></label>
+            <label>Due Date<input name="dueDate" type="date" required></label>
+          </div>
+          <label>Status
+            <select name="status">
+              <option>New</option>
+              <option>Practice</option>
+              <option>Revision</option>
+              <option>Important</option>
+            </select>
+          </label>
+          <label>Attachment<input name="attachment" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"></label>
+          <button class="homework-submit" type="submit">Upload Homework</button>
+          <p class="homework-note" id="admin-form-message"></p>
+        </form>
+
+        <div class="homework-board admin-list-panel">
+          <div class="homework-toolbar">
+            <button class="homework-filter active" type="button" data-class="all">All</button>
+            <button class="homework-filter" type="button" data-class="5-8">Class 5-8</button>
+            <button class="homework-filter" type="button" data-class="9-10">Class 9-10</button>
+            <button class="homework-filter" type="button" data-class="11-12">Class 11-12</button>
+          </div>
+          <div class="homework-list" id="admin-homework-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

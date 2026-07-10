@@ -1,0 +1,13 @@
+{
+  "name": "uplift-career-institute",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Uplift Career Institute website and teacher homework portal",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
