@@ -116,13 +116,22 @@ function parseCookies(req) {
 }
 
 function isAuthed(req) {
-  const cookies = parseCookies(req);
-  const expiresAt = sessions.get(cookies.uplift_session);
-  if (!expiresAt || expiresAt < Date.now()) {
-    sessions.delete(cookies.uplift_session);
-    return false;
-  }
-  return true;
+    const cookies = parseCookies(req);
+
+    console.log("Cookies:", cookies);
+
+    const expiresAt = sessions.get(cookies.uplift_session);
+
+    console.log("Token from cookie:", cookies.uplift_session);
+    console.log("Expires:", expiresAt);
+    console.log("All sessions:", [...sessions.keys()]);
+
+    if (!expiresAt || expiresAt < Date.now()) {
+        sessions.delete(cookies.uplift_session);
+        return false;
+    }
+
+    return true;
 }
 
 function readBody(req, maxBytes = MAX_BODY_BYTES) {
@@ -203,6 +212,8 @@ async function handleLogin(req, res) {
   if (body.username === ADMIN_USER && body.password === ADMIN_PASSWORD) {
     const token = crypto.randomBytes(24).toString('hex');
     sessions.set(token, Date.now() + SESSION_MAX_AGE_SECONDS * 1000);
+    console.log("Created session:", token);
+console.log("Session count:", sessions.size);
     const secureCookie = process.env.COOKIE_SECURE === 'true' ? '; Secure' : '';
     sendJson(res, 200, { ok: true }, {
       'Set-Cookie': `uplift_session=${encodeURIComponent(token)}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${SESSION_MAX_AGE_SECONDS}${secureCookie}`
