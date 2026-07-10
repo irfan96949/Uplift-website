@@ -35,7 +35,7 @@ function showDashboard(show) {
 }
 
 async function checkSession() {
-  const response = await fetch(API_URL + '/api/session');
+  const response = await fetch(API_URL + '/api/session', {credentials: 'include'});
   const data = await response.json();
   showDashboard(data.loggedIn);
   if (data.loggedIn) loadHomework();
@@ -47,6 +47,7 @@ async function login() {
   const password = document.getElementById('login-password').value;
   const response = await fetch(API_URL + '/api/login', {
     method: 'POST',
+    credentials: 'include',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
   });
@@ -59,7 +60,7 @@ async function login() {
 }
 
 async function logout() {
-  await fetch(API_URL + '/api/logout', { method: 'POST' });
+  await fetch(API_URL + '/api/logout', { method: 'POST',credentials: 'include' });
   showDashboard(false);
 }
 
@@ -89,7 +90,7 @@ function renderHomework(items) {
 }
 
 async function loadHomework() {
-  const response = await fetch(API_URL + '/api/homework');
+  const response = await fetch(API_URL + '/api/homework', {credentials: 'include'});
   const items = await response.json();
   renderHomework(items);
 }
@@ -99,6 +100,7 @@ homeworkForm.addEventListener('submit', async event => {
   formMessage.textContent = 'Uploading...';
   const response = await fetch(API_URL + '/api/homework', {
     method: 'POST',
+    credentials: 'include',
     body: new FormData(homeworkForm)
   });
   const data = await response.json();
