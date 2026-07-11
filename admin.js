@@ -83,7 +83,7 @@ function renderHomework(items) {
         <span>Due: ${formatDate(item.dueDate)}</span>
         <span>Status: ${escapeText(item.status || 'New')}</span>
       </div>
-      ${item.attachmentUrl ? `<a href="${escapeText(item.attachmentUrl)}" class="homework-link" target="_blank">Open Attachment</a>` : ''}
+      ${item.attachmentUrl ? `<a href="${API_URL}${escapeText(item.attachmentUrl)}" class="homework-link" target="_blank">Open Attachment</a>` : ''}
       <button class="homework-delete" type="button" data-id="${escapeText(item.id)}">Delete</button>
     </article>
   `).join('');
@@ -118,7 +118,8 @@ homeworkList.addEventListener('click', async event => {
   if (!button) return;
   if (!confirm('Delete this homework?')) return;
   await fetch(`${API_URL}/api/homework/${button.dataset.id}`, {
-  method: 'DELETE'
+  method: 'DELETE',
+  credentials: 'include'
 });
   loadHomework();
 });
